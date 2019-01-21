@@ -244,10 +244,6 @@ public class ErrorLogger {
      * @return the content of the log file
      */
     private StringBuilder getLogFileContent() {
-        try {
-            return new StringBuilder(FileCom.readFullText(new File(getLogFilePath())));
-        } catch (IOException e) {
-            return new StringBuilder();
-        }
+        return new StringBuilder(FileCom.readFullText(new File(getLogFilePath())));
     }
 }
